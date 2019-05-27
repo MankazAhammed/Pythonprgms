@@ -1,0 +1,21 @@
+from tkinter import *
+a=Tk()
+def hello():
+    c=b.get()
+    myLabel3=Label(text="WAHOO",fg='blue',bg='yellow',font=10).pack()
+def dele():
+    myLabel1=Label(text="Yahoo",fg='blue',bg='yellow',font=10).pack()
+b=StringVar()
+a.title("Infosys")
+a.geometry("500x500+100+10")
+myLabel1=Label(a,text="Registration",fg='blue',bg='yellow').pack()
+myButton1=Button(a,text="Submit",fg='black',bg='blue',command=hello,font=10).pack()
+myButton2=Button(a,text="Cancel",fg='black',bg='blue',command=dele,font=10).pack()
+text=Entry(textvariable=b).pack()
+mymenu=Menu()
+mymenu.add_cascade(label="File")
+mymenu.add_cascade(label="Edit")
+mymenu.add_cascade(label="Format")
+mymenu.add_cascade(label="Run")
+a.config(menu=mymenu)
+a.mainloop()
